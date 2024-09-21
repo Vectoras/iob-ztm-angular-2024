@@ -1,52 +1,46 @@
 <!-- Registration Form -->
 <form [formGroup]="registerForm">
   <!-- Name -->
-  <div class="mb-3">
-    <label class="inline-block mb-2">Name</label>
-    <input
-      formControlName="name"
-      type="text"
-      class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
-      placeholder="Enter Name"
-    />
-  </div>
+  <app-input
+    type="text"
+    label="Name"
+    placeholder="Enter Name"
+    [control]="registerForm.controls.name"
+  ></app-input>
   <!-- Email -->
   <div class="mb-3">
-    <label class="inline-block mb-2">Email</label>
-    <input
-      formControlName="email"
+    <app-input
       type="email"
-      class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
+      label="Email"
       placeholder="Enter Email"
-    />
+      [control]="registerForm.controls.email"
+    ></app-input>
   </div>
   <!-- Age -->
   <div class="mb-3">
-    <label class="inline-block mb-2">Age</label>
-    <input
-      formControlName="age"
+    <app-input
       type="number"
-      class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
+      label="Enter Age"
+      placeholder="Age"
+      [control]="registerForm.controls.age"
     />
   </div>
   <!-- Password -->
   <div class="mb-3">
-    <label class="inline-block mb-2">Password</label>
-    <input
-      formControlName="password"
+    <app-input
       type="password"
-      class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
+      label="Password"
       placeholder="Password"
+      [control]="registerForm.controls.password"
     />
   </div>
   <!-- Confirm Password -->
   <div class="mb-3">
-    <label class="inline-block mb-2">Confirm Password</label>
-    <input
-      formControlName="confirm_password"
+    <app-input
       type="password"
-      class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
+      label="Confirm Password"
       placeholder="Confirm Password"
+      [control]="registerForm.controls.confirm_password"
     />
   </div>
   <!-- Phone Number -->
