@@ -15,8 +15,16 @@ export class RegisterComponent {
       Validators.min(18),
       Validators.max(120),
     ]),
-    password: new FormControl('', [Validators.required, Validators.minLength(8), Validators.pattern(/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).*)/)]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(8),
+      Validators.pattern(/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).*)/),
+    ]),
     confirm_password: new FormControl('', [Validators.required]),
-    phoneNumber: new FormControl('', []),
+    phoneNumber: new FormControl('', [
+      Validators.required,
+      Validators.minLength(13),
+      Validators.maxLength(13),
+    ]),
   });
 }
