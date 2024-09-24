@@ -27,4 +27,14 @@ export class RegisterComponent {
       Validators.maxLength(13),
     ]),
   });
+
+  showAlert = false;
+  alertMsg = 'Please wait! Your account is being created.';
+  alertColor: 'blue' | 'green' | 'red' = 'blue';
+
+  public register(): void {
+    this.showAlert = true;
+    this.alertMsg = 'Please wait! Your account is being created.';
+    this.alertColor = 'blue';
+  }
 }
